@@ -14,7 +14,9 @@ module.exports = {
     extensions: [".ts", ".tsx", ".js", ".json"],
   },
   plugins: [
-    new HtmlWebpackPlugin(),
+    new HtmlWebpackPlugin({
+      favicon: path.resolve("./favicon.svg"),
+    }),
     new MiniCssExtractPlugin({
       filename: "[name].[contenthash].css",
     }),
